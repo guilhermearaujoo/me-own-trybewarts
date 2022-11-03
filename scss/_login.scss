@@ -1,0 +1,62 @@
+.head-login {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  column-gap: 30px;
+  position: relative;
+
+  input {
+    height: 35px;
+    padding: 5px 15px;
+    border: transparent;
+    border-bottom: 2px solid $inative-color;
+    background-color: transparent;
+    font-size: 14px;
+    color: $secondary-color;
+
+    &::placeholder {
+      color: $secondary-color;
+    }
+
+    &:focus-visible{
+      outline: none;
+    }
+  }
+
+  &-button {
+    @include button-style;  
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+
+    &:hover {
+      @include button-style-hover;
+    }
+  } 
+}
+
+.active {
+  position: relative;
+  input {
+    border-bottom: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    border-bottom: 2px solid $secondary-color;
+    animation: border_anim 1s linear forwards;
+  }
+
+  @keyframes border_anim {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 100%;
+    }
+  }
+
+}
