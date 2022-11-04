@@ -1,10 +1,11 @@
-@import 'config';
-@import 'login';
-@import 'main';
-@import 'slytherin';
-@import 'gryffindor';
-@import 'hufflepuff';
-@import 'ravenclaw';
+@import "config";
+@import "login";
+@import "main";
+@import "slytherin";
+@import "gryffindor";
+@import "hufflepuff";
+@import "ravenclaw";
+@import "footer";
 
 .head {
   display: grid;
@@ -14,7 +15,7 @@
   justify-content: space-between;
   height: 70px;
 
-  &-logo{
+  &-logo {
     display: flex;
     align-items: center;
     &-img {
@@ -25,18 +26,5 @@
 
   &-text {
     font-size: 700;
-  }
-}
-
-.avaliation-radio {
-  display: grid;
-  grid-template-columns: repeat(10, auto);
-  align-items: center;
-
-  label {
-    display: grid;
-    grid-template-columns: 15px 20px;
-    align-items: center;
-    gap: 10px;
   }
 }

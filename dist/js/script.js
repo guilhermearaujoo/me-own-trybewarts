@@ -25,4 +25,35 @@ selected.addEventListener('change', () => {
     body.className = selected.value;
 })
 
+// set dinamic counter for the text area
+function changeCounter() {
+    const textarea = document.getElementById('textarea');
+    const span = document.getElementById('counter');
+    const size = 500 - textarea.value.length;
+    span.innerText = size;
+  }
+  
+  const textarea = document.getElementById('textarea');
+  textarea.addEventListener('input', changeCounter);
 
+  // make the button send abilited only if mark concent input
+
+const checkBox = document.getElementById('agreement');
+const btn = document.getElementById('submit-btn');
+btn.disabled = true;
+
+const clickCheckBox = () => {
+  if (checkBox.checked) {
+    btn.disabled = false;
+    btn.addEventListener('click', displayNone);
+  } else {
+    btn.disabled = true;
+  }
+}
+
+
+const displayNone = (event) => {
+    event.preventDefault();
+}
+
+checkBox.addEventListener('click', clickCheckBox);

@@ -98,6 +98,7 @@ input:focus-visible {
 .main .form-div h1 {
   text-align: center;
   font-weight: 700;
+  margin-bottom: 0;
 }
 .main .form-div .form-select {
   border-color: #E09C09;
@@ -110,13 +111,13 @@ input:focus-visible {
   height: 100%;
 }
 .main .form-div #evaluation-form .my-row {
-  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 20px;
 }
 .main .form-div #evaluation-form .my-row .select {
+  margin-top: 10px;
   align-items: center;
   display: grid;
   grid-template-columns: 50px auto;
@@ -146,6 +147,10 @@ input:focus-visible {
   width: 65%;
 }
 
+hr {
+  margin: 0.6rem !important;
+}
+
 .radio {
   display: flex;
   flex-direction: column;
@@ -173,6 +178,7 @@ input:focus-visible {
 .checkbox p {
   font-weight: 700;
   color: #660000;
+  margin-bottom: 0;
 }
 .checkbox .row-checkbox {
   display: grid;
@@ -184,7 +190,8 @@ input:focus-visible {
   grid-template-columns: auto auto;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   color: #660000;
 }
 
@@ -197,15 +204,69 @@ input:focus-visible {
   font-weight: 700;
 }
 .avaliation .avaliation-radio {
+  height: 20px;
   display: grid;
   grid-template-columns: repeat(10, auto);
   align-items: center;
+  margin-bottom: 5px;
 }
 .avaliation .avaliation-radio label {
   display: grid;
   grid-template-columns: 15px 20px;
   align-items: center;
   gap: 10px;
+}
+
+.avaliation-radio {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  align-items: center;
+}
+.avaliation-radio label {
+  display: grid;
+  grid-template-columns: 15px 20px;
+  align-items: center;
+  gap: 10px;
+}
+
+.div-textarea {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.div-textarea label {
+  font-weight: 700;
+}
+.div-textarea textarea {
+  padding-left: 10px;
+  resize: none;
+  width: 100%;
+  height: 80px;
+}
+.div-textarea span {
+  position: absolute;
+  left: 550px;
+  top: 80px;
+}
+
+.div-agreement {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: auto 5px;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.div-agreement .form-check-input[type=checkbox] {
+  border-radius: 100rem;
+  padding: 0;
+  border: 2px solid #000000;
+}
+
+.div-btn {
+  margin-top: 5px;
+}
+.div-btn .btn-primary {
+  border: none;
 }
 
 .slytherin .head {
@@ -266,6 +327,9 @@ input:focus-visible {
 .slytherin .main .form-div #evaluation-form .my-row input::placeholder {
   color: #2f751c;
 }
+.slytherin .main .form-div #evaluation-form .my-row input {
+  color: #2f751c;
+}
 .slytherin .main .radio #label-family {
   color: #2f751c;
 }
@@ -283,6 +347,31 @@ input:focus-visible {
 }
 .slytherin .main .avaliation {
   color: #2f751c;
+}
+.slytherin .div-textarea textarea {
+  color: #2f751c;
+}
+.slytherin .div-textarea label {
+  color: #2f751c;
+}
+.slytherin .div-textarea span {
+  color: #2f751c;
+}
+.slytherin .div-agreement {
+  color: #2f751c;
+}
+.slytherin .div-agreement .form-check-input[type=checkbox] {
+  border: 2px solid gray;
+}
+.slytherin .div-btn .btn-primary {
+  background-color: #2f751c;
+}
+.slytherin .div-btn .btn-primary:hover {
+  background-color: gray;
+}
+.slytherin footer {
+  background-color: #2f751c;
+  color: #fff;
 }
 
 .gryffindor .head {
@@ -343,6 +432,9 @@ input:focus-visible {
 .gryffindor .main .form-div #evaluation-form .my-row input::placeholder {
   color: #660000;
 }
+.gryffindor .main .form-div #evaluation-form .my-row input {
+  color: #660000;
+}
 .gryffindor .main .radio #label-family {
   color: #660000;
 }
@@ -360,6 +452,31 @@ input:focus-visible {
 }
 .gryffindor .main .avaliation {
   color: #660000;
+}
+.gryffindor .div-textarea textarea {
+  color: #660000;
+}
+.gryffindor .div-textarea label {
+  color: #660000;
+}
+.gryffindor .div-textarea span {
+  color: #660000;
+}
+.gryffindor .div-agreement {
+  color: #660000;
+}
+.gryffindor .div-agreement .form-check-input[type=checkbox] {
+  border: 2px solid #E09C09;
+}
+.gryffindor .div-btn .btn-primary {
+  background-color: #660000;
+}
+.gryffindor .div-btn .btn-primary:hover {
+  background-color: #E09C09;
+}
+.gryffindor footer {
+  background-color: #660000;
+  color: #fff;
 }
 
 .hufflepuff .head {
@@ -420,6 +537,9 @@ input:focus-visible {
 .hufflepuff .main .form-div #evaluation-form .my-row input::placeholder {
   color: #1A3956;
 }
+.hufflepuff .main .form-div #evaluation-form .my-row input {
+  color: #1A3956;
+}
 .hufflepuff .main .radio #label-family {
   color: #1A3956;
 }
@@ -437,6 +557,31 @@ input:focus-visible {
 }
 .hufflepuff .main .avaliation {
   color: #1A3956;
+}
+.hufflepuff .div-textarea textarea {
+  color: #1A3956;
+}
+.hufflepuff .div-textarea label {
+  color: #1A3956;
+}
+.hufflepuff .div-textarea span {
+  color: #1A3956;
+}
+.hufflepuff .div-agreement {
+  color: #1A3956;
+}
+.hufflepuff .div-agreement .form-check-input[type=checkbox] {
+  border: 2px solid #8E4F1D;
+}
+.hufflepuff .div-btn .btn-primary {
+  background-color: #1A3956;
+}
+.hufflepuff .div-btn .btn-primary:hover {
+  background-color: #8E4F1D;
+}
+.hufflepuff footer {
+  background-color: #1A3956;
+  color: #fff;
 }
 
 .ravenclaw .head {
@@ -497,6 +642,9 @@ input:focus-visible {
 .ravenclaw .main .form-div #evaluation-form .my-row input::placeholder {
   color: #1F1E19;
 }
+.ravenclaw .main .form-div #evaluation-form .my-row input {
+  color: #1F1E19;
+}
 .ravenclaw .main .radio #label-family {
   color: #1F1E19;
 }
@@ -514,6 +662,45 @@ input:focus-visible {
 }
 .ravenclaw .main .avaliation {
   color: #1F1E19;
+}
+.ravenclaw .div-textarea textarea {
+  color: #1F1E19;
+}
+.ravenclaw .div-textarea label {
+  color: #1F1E19;
+}
+.ravenclaw .div-textarea span {
+  color: #1F1E19;
+}
+.ravenclaw .div-agreement {
+  color: #1F1E19;
+}
+.ravenclaw .div-agreement .form-check-input[type=checkbox] {
+  border: 2px solid #FF9D0B;
+}
+.ravenclaw .div-btn .btn-primary {
+  background-color: #1F1E19;
+}
+.ravenclaw .div-btn .btn-primary:hover {
+  background-color: #FF9D0B;
+}
+.ravenclaw footer {
+  background-color: #1F1E19;
+  color: #fff;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  margin: 0;
 }
 
 .head {
@@ -534,16 +721,4 @@ input:focus-visible {
 }
 .head-text {
   font-size: 700;
-}
-
-.avaliation-radio {
-  display: grid;
-  grid-template-columns: repeat(10, auto);
-  align-items: center;
-}
-.avaliation-radio label {
-  display: grid;
-  grid-template-columns: 15px 20px;
-  align-items: center;
-  gap: 10px;
 }/*# sourceMappingURL=index.css.map */

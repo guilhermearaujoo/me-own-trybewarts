@@ -66,6 +66,10 @@ $gryffindor-second: #E09C09;
           input::placeholder {
             color: $gryffindor-first;
           }
+
+          input {
+            color: $gryffindor-first;
+          }
         }
       }
     }
@@ -99,4 +103,41 @@ $gryffindor-second: #E09C09;
       color: $gryffindor-first;
     }
   }
+  .div-textarea {
+    textarea {
+      color: $gryffindor-first;
+    }
+
+    label {
+      color: $gryffindor-first;
+    }
+    
+    span {
+      color: $gryffindor-first;
+    }
+  }
+
+  .div-agreement {
+    color: $gryffindor-first;
+    .form-check-input[type=checkbox] {
+      border: 2px solid $gryffindor-second;
+    }
+  }
+
+  .div-btn {
+    .btn-primary {
+      background-color: $gryffindor-first;
+    }
+  
+    .btn-primary:hover {
+      background-color: $gryffindor-second;
+    }
+  }
+
+  footer {
+    background-color: $gryffindor-first;
+    color: #fff;
+  }
 }
+
+

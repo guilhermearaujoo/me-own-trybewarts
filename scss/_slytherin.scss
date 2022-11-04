@@ -66,6 +66,10 @@ $slytherin-second: gray;
           input::placeholder {
             color: $slytherin-first;
           }
+
+          input {
+            color: $slytherin-first;
+          }
         }
       }
     }
@@ -98,5 +102,42 @@ $slytherin-second: gray;
     .avaliation {
       color: $slytherin-first;
     }
+  }
+
+  .div-textarea {
+
+    textarea {
+      color: $slytherin-first;
+    }
+
+    label {
+      color: $slytherin-first;
+    }
+    
+    span {
+      color: $slytherin-first;
+    }
+  }
+
+  .div-agreement {
+    color: $slytherin-first;
+    .form-check-input[type=checkbox] {
+      border: 2px solid $slytherin-second;
+    }
+  }
+
+  .div-btn {
+    .btn-primary {
+      background-color: $slytherin-first;
+    }
+  
+    .btn-primary:hover {
+      background-color: $slytherin-second;
+    }
+  }
+
+  footer {
+    background-color: $slytherin-first;
+    color: #fff;
   }
 }

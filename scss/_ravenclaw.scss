@@ -66,6 +66,10 @@ $ravenclaw-second: #FF9D0B;
           input::placeholder {
             color: $ravenclaw-first;
           }
+
+          input {
+            color: $ravenclaw-first;
+          }
         }
       }
     }
@@ -98,5 +102,42 @@ $ravenclaw-second: #FF9D0B;
     .avaliation {
       color: $ravenclaw-first;
     }
+  }
+
+  .div-textarea {
+
+    textarea {
+      color: $ravenclaw-first;
+    }
+
+    label {
+      color: $ravenclaw-first;
+    }
+    
+    span {
+      color: $ravenclaw-first;
+    }
+  }
+
+  .div-agreement {
+    color: $ravenclaw-first;
+    .form-check-input[type=checkbox] {
+      border: 2px solid $ravenclaw-second;
+    }
+  }
+
+  .div-btn {
+    .btn-primary {
+      background-color: $ravenclaw-first;
+    }
+  
+    .btn-primary:hover {
+      background-color: $ravenclaw-second;
+    }
+  }
+
+  footer {
+    background-color: $ravenclaw-first;
+    color: #fff;
   }
 }

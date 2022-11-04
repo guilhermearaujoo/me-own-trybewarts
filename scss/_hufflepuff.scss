@@ -66,6 +66,10 @@ $hufflepuff-second: #8E4F1D;
           input::placeholder {
             color: $hufflepuff-first;
           }
+
+          input {
+            color: $hufflepuff-first;
+          }
         }
       }
     }
@@ -99,4 +103,42 @@ $hufflepuff-second: #8E4F1D;
       color: $hufflepuff-first;
     }
   }
+
+  .div-textarea {
+
+    textarea {
+      color: $hufflepuff-first;
+    }
+
+    label {
+      color: $hufflepuff-first;
+    }
+    
+    span {
+      color: $hufflepuff-first;
+    }
+  }
+
+  .div-agreement {
+    color: $hufflepuff-first;
+    .form-check-input[type=checkbox] {
+      border: 2px solid $hufflepuff-second;
+    }
+  }
+
+  .div-btn {
+    .btn-primary {
+      background-color: $hufflepuff-first;
+    }
+  
+    .btn-primary:hover {
+      background-color: $hufflepuff-second;
+    }
+  }
+
+  footer {
+    background-color: $hufflepuff-first;
+    color: #fff;
+  }
 }
+
