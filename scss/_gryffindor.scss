@@ -1,0 +1,102 @@
+$gryffindor-first: #660000;
+$gryffindor-second: #E09C09;
+
+.gryffindor {
+  .head {
+    background-color: $gryffindor-first;
+
+    input::placeholder,
+    input {
+      color: #fff;
+    }
+  }
+
+  .head-text {
+    color: #fff;
+  }
+
+  .active {
+    &::before {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  .head-login-button {
+    @include button-style {
+      background-color: #fff;
+      color: $gryffindor-first;
+    }
+
+    &:hover {
+      @include button-style-hover {
+        border: 1px solid $gryffindor-second;
+        background-color: $gryffindor-second;
+      }
+    }
+  }
+
+  .main {
+    .form-div {
+      h1 {
+        color: $gryffindor-first;
+      }
+
+      .active {
+        &::before {
+          border-bottom: 2px solid $gryffindor-second;
+        }
+      }
+
+
+      .form-select {
+        border-color: $gryffindor-first;
+      }
+
+      .form-select:focus {
+        border-color: $gryffindor-first;
+      }
+
+      #evaluation-form {
+        .my-row {
+          .select {
+            label {
+              color: $gryffindor-first;
+            }
+          }
+          input::placeholder {
+            color: $gryffindor-first;
+          }
+        }
+      }
+    }
+
+    .radio {
+      #label-family {
+        color: $gryffindor-first;
+      }
+      .form-check {
+        color: $gryffindor-first;
+      }
+
+      .form-check-input {
+        border: 2px solid $gryffindor-second;
+      }
+    }
+
+    .checkbox {
+      p {
+        color: $gryffindor-first;
+      }
+
+      .row-checkbox {
+        div {
+          color: $gryffindor-first;
+        }
+      }
+    }
+
+    .avaliation {
+      color: $gryffindor-first;
+    }
+  }
+}

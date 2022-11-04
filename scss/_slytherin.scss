@@ -1,0 +1,102 @@
+$slytherin-first: #2f751c;
+$slytherin-second: gray;
+
+.slytherin {
+  .head {
+    background-color: $slytherin-first;
+
+    input::placeholder,
+    input {
+      color: #fff;
+    }
+  }
+
+  .head-text {
+    color: #fff;
+  }
+
+  .active {
+    &::before {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  .head-login-button {
+    @include button-style {
+      background-color: #fff;
+      color: $slytherin-first;
+    }
+
+    &:hover {
+      @include button-style-hover {
+        border: 1px solid $slytherin-second;
+        background-color: $slytherin-second;
+      }
+    }
+  }
+
+  .main {
+    .form-div {
+      h1 {
+        color: $slytherin-first;
+      }
+
+      .active {
+        &::before {
+          border-bottom: 2px solid $slytherin-first;
+        }
+      }
+
+
+      .form-select {
+        border-color: $slytherin-first;
+      }
+
+      .form-select:focus {
+        border-color: $slytherin-first;
+      }
+
+      #evaluation-form {
+        .my-row {
+          .select {
+            label {
+              color: $slytherin-first;
+            }
+          }
+          input::placeholder {
+            color: $slytherin-first;
+          }
+        }
+      }
+    }
+
+    .radio {
+      #label-family {
+        color: $slytherin-first;
+      }
+      .form-check {
+        color: $slytherin-first;
+      }
+
+      .form-check-input {
+        border: 2px solid $slytherin-second;
+      }
+    }
+
+    .checkbox {
+      p {
+        color: $slytherin-first;
+      }
+
+      .row-checkbox {
+        div {
+          color: $slytherin-first;
+        }
+      }
+    }
+
+    .avaliation {
+      color: $slytherin-first;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+$ravenclaw-first: #1F1E19;
+$ravenclaw-second: #FF9D0B;
+
+.ravenclaw {
+  .head {
+    background-color: $ravenclaw-first;
+
+    input::placeholder,
+    input {
+      color: #fff;
+    }
+  }
+
+  .head-text {
+    color: $ravenclaw-second;
+  }
+
+  .active {
+    &::before {
+      border-bottom: 2px solid $ravenclaw-second;
+    }
+  }
+
+  .head-login-button {
+    @include button-style {
+      background-color: #fff;
+      color: $ravenclaw-second;
+    }
+
+    &:hover {
+      @include button-style-hover {
+        border: 1px solid $ravenclaw-second;
+        background-color: $ravenclaw-second;
+      }
+    }
+  }
+
+  .main {
+    .form-div {
+      h1 {
+        color: $ravenclaw-first;
+      }
+
+      .active {
+        &::before {
+          border-bottom: 2px solid $ravenclaw-second;
+        }
+      }
+
+
+      .form-select {
+        border-color: $ravenclaw-first;
+      }
+
+      .form-select:focus {
+        border-color: $ravenclaw-first;
+      }
+
+      #evaluation-form {
+        .my-row {
+          .select {
+            label {
+              color: $ravenclaw-first;
+            }
+          }
+          input::placeholder {
+            color: $ravenclaw-first;
+          }
+        }
+      }
+    }
+
+    .radio {
+      #label-family {
+        color: $ravenclaw-first;
+      }
+      .form-check {
+        color: $ravenclaw-first;
+      }
+
+      .form-check-input {
+        border: 2px solid $ravenclaw-second;
+      }
+    }
+
+    .checkbox {
+      p {
+        color: $ravenclaw-first;
+      }
+
+      .row-checkbox {
+        div {
+          color: $ravenclaw-first;
+        }
+      }
+    }
+
+    .avaliation {
+      color: $ravenclaw-first;
+    }
+  }
+}

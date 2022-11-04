@@ -1,30 +1,27 @@
 $primary-color: rgb(50, 167, 145);
-$secondary-color: #fff;
-$border-active: rgb(24, 87, 75);
+$secondary-color: #660000;
+$third-color: #E09C09;
 $inative-color: rgba(140,140,140);
 
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+  overflow: hidden;
 }
-
-body {
-  font-family: Inknut Antiqua, serif;
-}
-
 
 @mixin button-style-hover {
-  background-color: #3c3c3b;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   color: #fff;
-  border: 1px solid #00afab;
+  border: 1px solid $third-color;
+  @content 
 }
 
 @mixin button-style {
   background-color: #fff;
-  color: $primary-color;
   font-weight: 700;
   border: none;
   transition: all 0.4s;
+  @content
 }
+

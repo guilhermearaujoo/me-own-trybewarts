@@ -2,10 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-}
-
-body {
-  font-family: Inknut Antiqua, serif;
+  overflow: hidden;
 }
 
 .head-login {
@@ -15,30 +12,8 @@ body {
        column-gap: 30px;
   position: relative;
 }
-.head-login input {
-  height: 35px;
-  padding: 5px 15px;
-  border: transparent;
-  border-bottom: 2px solid rgb(140, 140, 140);
-  background-color: transparent;
-  font-size: 14px;
-  color: #fff;
-}
-.head-login input::-moz-placeholder {
-  color: #fff;
-}
-.head-login input:-ms-input-placeholder {
-  color: #fff;
-}
-.head-login input::placeholder {
-  color: #fff;
-}
-.head-login input:focus-visible {
-  outline: none;
-}
 .head-login-button {
   background-color: #fff;
-  color: rgb(50, 167, 145);
   font-weight: 700;
   border: none;
   transition: all 0.4s;
@@ -47,10 +22,34 @@ body {
   border-radius: 20px;
 }
 .head-login-button:hover {
-  background-color: #3c3c3b;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   color: #fff;
-  border: 1px solid #00afab;
+  border: 1px solid #E09C09;
+}
+
+input {
+  height: 35px;
+  padding: 5px 15px;
+  border: transparent;
+  border-bottom: 2px solid rgb(140, 140, 140);
+  background-color: transparent;
+  font-size: 14px;
+  color: #fff;
+}
+input::-moz-placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+input::placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+input:focus-visible {
+  outline: none;
 }
 
 .active {
@@ -65,9 +64,9 @@ body {
   left: 0;
   bottom: 2px;
   width: 0;
-  border-bottom: 2px solid #fff;
-  -webkit-animation: border_anim 1s linear forwards;
-          animation: border_anim 1s linear forwards;
+  border-bottom: 2px solid #E09C09;
+  -webkit-animation: border_anim 0.3s linear forwards;
+          animation: border_anim 0.3s linear forwards;
 }
 @-webkit-keyframes border_anim {
   0% {
@@ -86,13 +85,444 @@ body {
   }
 }
 
-.head {
-  background-color: rgb(50, 167, 145);
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vh;
+  width: 100%;
+}
+.main .form-div {
+  padding: 50px;
+  padding-top: 10px;
+}
+.main .form-div h1 {
+  text-align: center;
+  font-weight: 700;
+}
+.main .form-div .form-select {
+  border-color: #E09C09;
+}
+.main .form-div .form-select:focus {
+  border-color: #E09C09;
+  box-shadow: none;
+}
+.main .form-div #evaluation-form {
+  height: 100%;
+}
+.main .form-div #evaluation-form .my-row {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+.main .form-div #evaluation-form .my-row .select {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 50px auto;
+}
+.main .form-div #evaluation-form .my-row .select label {
+  color: #660000;
+}
+.main .form-div #evaluation-form .my-row input::-moz-placeholder {
+  color: #660000;
+}
+.main .form-div #evaluation-form .my-row input:-ms-input-placeholder {
+  color: #660000;
+}
+.main .form-div #evaluation-form .my-row input::placeholder {
+  color: #660000;
+}
+.main .form-div #evaluation-form .my-row .form-select {
+  padding: 5px 10px;
+}
+.main .img-aside {
+  display: flex;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+}
+.main .img-aside img {
+  width: 65%;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.radio #label-family {
+  color: #660000;
+  font-weight: 700;
+}
+.radio .form-check {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  color: #660000;
+}
+.radio .form-check-input {
+  border-radius: 100%;
+  margin: 0px;
+  padding: 5px;
+  outline: none;
+  border: 2px solid rgb(140, 140, 140);
+}
+
+.checkbox p {
+  font-weight: 700;
+  color: #660000;
+}
+.checkbox .row-checkbox {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: flex-start;
+}
+.checkbox .row-checkbox div {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: #660000;
+}
+
+.avaliation {
+  display: flex;
+  flex-direction: column;
+  color: #660000;
+}
+.avaliation #label-rate {
+  font-weight: 700;
+}
+.avaliation .avaliation-radio {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  align-items: center;
+}
+.avaliation .avaliation-radio label {
+  display: grid;
+  grid-template-columns: 15px 20px;
+  align-items: center;
+  gap: 10px;
+}
+
+.slytherin .head {
+  background-color: #2f751c;
+}
+.slytherin .head input::-moz-placeholder {
+  color: #fff;
+}
+.slytherin .head input:-ms-input-placeholder {
+  color: #fff;
+}
+.slytherin .head input::placeholder,
+.slytherin .head input {
+  color: #fff;
+}
+.slytherin .head-text {
+  color: #fff;
+}
+.slytherin .active::before {
+  border-bottom: 2px solid #fff;
+}
+.slytherin .head-login-button {
+  background-color: #fff;
+  font-weight: 700;
+  border: none;
+  transition: all 0.4s;
+  background-color: #fff;
+  color: #2f751c;
+}
+.slytherin .head-login-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  color: #fff;
+  border: 1px solid #E09C09;
+  border: 1px solid gray;
+  background-color: gray;
+}
+.slytherin .main .form-div h1 {
+  color: #2f751c;
+}
+.slytherin .main .form-div .active::before {
+  border-bottom: 2px solid #2f751c;
+}
+.slytherin .main .form-div .form-select {
+  border-color: #2f751c;
+}
+.slytherin .main .form-div .form-select:focus {
+  border-color: #2f751c;
+}
+.slytherin .main .form-div #evaluation-form .my-row .select label {
+  color: #2f751c;
+}
+.slytherin .main .form-div #evaluation-form .my-row input::-moz-placeholder {
+  color: #2f751c;
+}
+.slytherin .main .form-div #evaluation-form .my-row input:-ms-input-placeholder {
+  color: #2f751c;
+}
+.slytherin .main .form-div #evaluation-form .my-row input::placeholder {
+  color: #2f751c;
+}
+.slytherin .main .radio #label-family {
+  color: #2f751c;
+}
+.slytherin .main .radio .form-check {
+  color: #2f751c;
+}
+.slytherin .main .radio .form-check-input {
+  border: 2px solid gray;
+}
+.slytherin .main .checkbox p {
+  color: #2f751c;
+}
+.slytherin .main .checkbox .row-checkbox div {
+  color: #2f751c;
+}
+.slytherin .main .avaliation {
+  color: #2f751c;
+}
+
+.gryffindor .head {
+  background-color: #660000;
+}
+.gryffindor .head input::-moz-placeholder {
+  color: #fff;
+}
+.gryffindor .head input:-ms-input-placeholder {
+  color: #fff;
+}
+.gryffindor .head input::placeholder,
+.gryffindor .head input {
+  color: #fff;
+}
+.gryffindor .head-text {
+  color: #fff;
+}
+.gryffindor .active::before {
+  border-bottom: 2px solid #fff;
+}
+.gryffindor .head-login-button {
+  background-color: #fff;
+  font-weight: 700;
+  border: none;
+  transition: all 0.4s;
+  background-color: #fff;
+  color: #660000;
+}
+.gryffindor .head-login-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  color: #fff;
+  border: 1px solid #E09C09;
+  border: 1px solid #E09C09;
+  background-color: #E09C09;
+}
+.gryffindor .main .form-div h1 {
+  color: #660000;
+}
+.gryffindor .main .form-div .active::before {
+  border-bottom: 2px solid #E09C09;
+}
+.gryffindor .main .form-div .form-select {
+  border-color: #660000;
+}
+.gryffindor .main .form-div .form-select:focus {
+  border-color: #660000;
+}
+.gryffindor .main .form-div #evaluation-form .my-row .select label {
+  color: #660000;
+}
+.gryffindor .main .form-div #evaluation-form .my-row input::-moz-placeholder {
+  color: #660000;
+}
+.gryffindor .main .form-div #evaluation-form .my-row input:-ms-input-placeholder {
+  color: #660000;
+}
+.gryffindor .main .form-div #evaluation-form .my-row input::placeholder {
+  color: #660000;
+}
+.gryffindor .main .radio #label-family {
+  color: #660000;
+}
+.gryffindor .main .radio .form-check {
+  color: #660000;
+}
+.gryffindor .main .radio .form-check-input {
+  border: 2px solid #E09C09;
+}
+.gryffindor .main .checkbox p {
+  color: #660000;
+}
+.gryffindor .main .checkbox .row-checkbox div {
+  color: #660000;
+}
+.gryffindor .main .avaliation {
+  color: #660000;
+}
+
+.hufflepuff .head {
+  background-color: #1A3956;
+}
+.hufflepuff .head input::-moz-placeholder {
+  color: #fff;
+}
+.hufflepuff .head input:-ms-input-placeholder {
+  color: #fff;
+}
+.hufflepuff .head input::placeholder,
+.hufflepuff .head input {
+  color: #fff;
+}
+.hufflepuff .head-text {
+  color: #fff;
+}
+.hufflepuff .active::before {
+  border-bottom: 2px solid #8E4F1D;
+}
+.hufflepuff .head-login-button {
+  background-color: #fff;
+  font-weight: 700;
+  border: none;
+  transition: all 0.4s;
+  background-color: #fff;
+  color: #1A3956;
+}
+.hufflepuff .head-login-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  color: #fff;
+  border: 1px solid #E09C09;
+  border: 1px solid #8E4F1D;
+  background-color: #8E4F1D;
+}
+.hufflepuff .main .form-div h1 {
+  color: #1A3956;
+}
+.hufflepuff .main .form-div .active::before {
+  border-bottom: 2px solid #8E4F1D;
+}
+.hufflepuff .main .form-div .form-select {
+  border-color: #1A3956;
+}
+.hufflepuff .main .form-div .form-select:focus {
+  border-color: #1A3956;
+}
+.hufflepuff .main .form-div #evaluation-form .my-row .select label {
+  color: #1A3956;
+}
+.hufflepuff .main .form-div #evaluation-form .my-row input::-moz-placeholder {
+  color: #1A3956;
+}
+.hufflepuff .main .form-div #evaluation-form .my-row input:-ms-input-placeholder {
+  color: #1A3956;
+}
+.hufflepuff .main .form-div #evaluation-form .my-row input::placeholder {
+  color: #1A3956;
+}
+.hufflepuff .main .radio #label-family {
+  color: #1A3956;
+}
+.hufflepuff .main .radio .form-check {
+  color: #1A3956;
+}
+.hufflepuff .main .radio .form-check-input {
+  border: 2px solid #8E4F1D;
+}
+.hufflepuff .main .checkbox p {
+  color: #1A3956;
+}
+.hufflepuff .main .checkbox .row-checkbox div {
+  color: #1A3956;
+}
+.hufflepuff .main .avaliation {
+  color: #1A3956;
+}
+
+.ravenclaw .head {
+  background-color: #1F1E19;
+}
+.ravenclaw .head input::-moz-placeholder {
+  color: #fff;
+}
+.ravenclaw .head input:-ms-input-placeholder {
+  color: #fff;
+}
+.ravenclaw .head input::placeholder,
+.ravenclaw .head input {
+  color: #fff;
+}
+.ravenclaw .head-text {
+  color: #FF9D0B;
+}
+.ravenclaw .active::before {
+  border-bottom: 2px solid #FF9D0B;
+}
+.ravenclaw .head-login-button {
+  background-color: #fff;
+  font-weight: 700;
+  border: none;
+  transition: all 0.4s;
+  background-color: #fff;
+  color: #FF9D0B;
+}
+.ravenclaw .head-login-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  color: #fff;
+  border: 1px solid #E09C09;
+  border: 1px solid #FF9D0B;
+  background-color: #FF9D0B;
+}
+.ravenclaw .main .form-div h1 {
+  color: #1F1E19;
+}
+.ravenclaw .main .form-div .active::before {
+  border-bottom: 2px solid #FF9D0B;
+}
+.ravenclaw .main .form-div .form-select {
+  border-color: #1F1E19;
+}
+.ravenclaw .main .form-div .form-select:focus {
+  border-color: #1F1E19;
+}
+.ravenclaw .main .form-div #evaluation-form .my-row .select label {
+  color: #1F1E19;
+}
+.ravenclaw .main .form-div #evaluation-form .my-row input::-moz-placeholder {
+  color: #1F1E19;
+}
+.ravenclaw .main .form-div #evaluation-form .my-row input:-ms-input-placeholder {
+  color: #1F1E19;
+}
+.ravenclaw .main .form-div #evaluation-form .my-row input::placeholder {
+  color: #1F1E19;
+}
+.ravenclaw .main .radio #label-family {
+  color: #1F1E19;
+}
+.ravenclaw .main .radio .form-check {
+  color: #1F1E19;
+}
+.ravenclaw .main .radio .form-check-input {
+  border: 2px solid #FF9D0B;
+}
+.ravenclaw .main .checkbox p {
+  color: #1F1E19;
+}
+.ravenclaw .main .checkbox .row-checkbox div {
+  color: #1F1E19;
+}
+.ravenclaw .main .avaliation {
+  color: #1F1E19;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: auto auto auto;
   padding: 0 20px;
   align-items: center;
   justify-content: space-between;
+  height: 70px;
 }
 .head-logo {
   display: flex;
@@ -104,5 +534,16 @@ body {
 }
 .head-text {
   font-size: 700;
-  color: #fff;
+}
+
+.avaliation-radio {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  align-items: center;
+}
+.avaliation-radio label {
+  display: grid;
+  grid-template-columns: 15px 20px;
+  align-items: center;
+  gap: 10px;
 }/*# sourceMappingURL=index.css.map */

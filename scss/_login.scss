@@ -4,24 +4,6 @@
   column-gap: 30px;
   position: relative;
 
-  input {
-    height: 35px;
-    padding: 5px 15px;
-    border: transparent;
-    border-bottom: 2px solid $inative-color;
-    background-color: transparent;
-    font-size: 14px;
-    color: $secondary-color;
-
-    &::placeholder {
-      color: $secondary-color;
-    }
-
-    &:focus-visible{
-      outline: none;
-    }
-  }
-
   &-button {
     @include button-style;  
     width: 150px;
@@ -32,6 +14,25 @@
       @include button-style-hover;
     }
   } 
+}
+
+input {
+  height: 35px;
+  padding: 5px 15px;
+  border: transparent;
+  border-bottom: 2px solid $inative-color;
+  background-color: transparent;
+  font-size: 14px;
+  color: #fff;
+
+  &::placeholder {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  &:focus-visible{
+    outline: none;
+  }
 }
 
 .active {
@@ -46,8 +47,8 @@
     left: 0;
     bottom: 2px;
     width: 0;
-    border-bottom: 2px solid $secondary-color;
-    animation: border_anim 1s linear forwards;
+    border-bottom: 2px solid $third-color;
+    animation: border_anim 0.3s linear forwards;
   }
 
   @keyframes border_anim {

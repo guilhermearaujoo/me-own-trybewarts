@@ -1,13 +1,18 @@
 @import 'config';
 @import 'login';
+@import 'main';
+@import 'slytherin';
+@import 'gryffindor';
+@import 'hufflepuff';
+@import 'ravenclaw';
 
 .head {
-  background-color: $primary-color;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto auto auto;
   padding: 0 20px;
   align-items: center;
   justify-content: space-between;
+  height: 70px;
 
   &-logo{
     display: flex;
@@ -20,7 +25,18 @@
 
   &-text {
     font-size: 700;
-    color: $secondary-color;
   }
+}
 
+.avaliation-radio {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  align-items: center;
+
+  label {
+    display: grid;
+    grid-template-columns: 15px 20px;
+    align-items: center;
+    gap: 10px;
+  }
 }

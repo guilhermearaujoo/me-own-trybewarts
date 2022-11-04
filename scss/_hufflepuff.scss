@@ -1,0 +1,102 @@
+$hufflepuff-first: #1A3956;
+$hufflepuff-second: #8E4F1D;
+
+.hufflepuff {
+  .head {
+    background-color: $hufflepuff-first;
+
+    input::placeholder,
+    input {
+      color: #fff;
+    }
+  }
+
+  .head-text {
+    color: #fff;
+  }
+
+  .active {
+    &::before {
+      border-bottom: 2px solid $hufflepuff-second;
+    }
+  }
+
+  .head-login-button {
+    @include button-style {
+      background-color: #fff;
+      color: $hufflepuff-first;
+    }
+
+    &:hover {
+      @include button-style-hover {
+        border: 1px solid $hufflepuff-second;
+        background-color: $hufflepuff-second;
+      }
+    }
+  }
+
+  .main {
+    .form-div {
+      h1 {
+        color: $hufflepuff-first;
+      }
+
+      .active {
+        &::before {
+          border-bottom: 2px solid $hufflepuff-second;
+        }
+      }
+
+
+      .form-select {
+        border-color: $hufflepuff-first;
+      }
+
+      .form-select:focus {
+        border-color: $hufflepuff-first;
+      }
+
+      #evaluation-form {
+        .my-row {
+          .select {
+            label {
+              color: $hufflepuff-first;
+            }
+          }
+          input::placeholder {
+            color: $hufflepuff-first;
+          }
+        }
+      }
+    }
+
+    .radio {
+      #label-family {
+        color: $hufflepuff-first;
+      }
+      .form-check {
+        color: $hufflepuff-first;
+      }
+
+      .form-check-input {
+        border: 2px solid $hufflepuff-second;
+      }
+    }
+
+    .checkbox {
+      p {
+        color: $hufflepuff-first;
+      }
+
+      .row-checkbox {
+        div {
+          color: $hufflepuff-first;
+        }
+      }
+    }
+
+    .avaliation {
+      color: $hufflepuff-first;
+    }
+  }
+}

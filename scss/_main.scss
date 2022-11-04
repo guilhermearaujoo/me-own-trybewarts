@@ -1,0 +1,135 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vh;
+  width: 100%;
+
+  .form-div {
+    padding: 50px;
+    padding-top: 10px;
+    h1 {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .form-select {
+      border-color: $third-color;
+    }
+
+    .form-select:focus {
+      border-color: $third-color;
+      box-shadow: none;
+    }
+
+    #evaluation-form {
+      height: 100%;
+
+      .my-row {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 20px;
+
+        .select {
+          align-items: center;
+          display: grid;
+          grid-template-columns: 50px auto;
+          label {
+            color: $secondary-color;
+          }
+        }
+
+        input::placeholder {
+          color: $secondary-color;
+        }
+
+        .form-select {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  .img-aside {
+    display: flex;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 65%;
+    }
+  }
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  #label-family {
+    color: $secondary-color;
+    font-weight: 700;
+  }
+  .form-check {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    color: $secondary-color;
+  }
+
+  .form-check-input {
+    border-radius: 100%;
+    margin: 0px;
+    padding: 5px;
+    outline: none;
+
+    border: 2px solid $inative-color;
+  }
+}
+
+.checkbox {
+  p {
+    font-weight: 700;
+    color: $secondary-color;
+  }
+
+  .row-checkbox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: flex-start;
+
+    div {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      color: $secondary-color;
+    }
+  }
+}
+
+.avaliation {
+  display: flex;
+  flex-direction: column;
+  color: $secondary-color;
+  #label-rate {
+    font-weight: 700;
+  }
+
+  .avaliation-radio {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    align-items: center;
+
+    label {
+      display: grid;
+      grid-template-columns: 15px 20px;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
