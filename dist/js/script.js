@@ -40,7 +40,7 @@ function showFamily() {
   const favoriteFamily = document.createElement('p');
   for (let index = 0; index < family.length; index += 1) {
     if (family[index].checked) {
-      favoriteFamily.innerText = `Família: ${family[index].value}`;
+      favoriteFamily.innerText = `Família: ${family[index].id}`;
     }
   }
   formData.appendChild(favoriteFamily);
