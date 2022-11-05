@@ -97,6 +97,8 @@ input.forEach((element, index) => element.addEventListener('keypress', () => {
 //validate de login information and throw and warning
 const validateLogin = () => {
     (input[0].value === "tryber@teste.com" && input[1].value === "123456") ? window.alert("Olá, Tryber!") : window.alert("Email ou senha inválidos.");
+    input[0].value = '';
+    input[1].value = '';
 }
 buttonSendTop.addEventListener('click', validateLogin);
 
